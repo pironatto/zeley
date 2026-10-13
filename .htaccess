@@ -1,0 +1,12 @@
+RewriteEngine On
+Options -Indexes
+
+# Rota amigável para qualquer script em core/pages/corujao
+RewriteRule ^corujao/([a-zA-Z0-9_-]+)/?$ core/pages/corujao/$1.php [L,QSA]
+
+# Se não for arquivo nem diretório, redireciona para public/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php?pag=$1 [L,QSA]
+
+RewriteRule ^$ public/index.php [L,QSA]

@@ -1,0 +1,151 @@
+﻿/* Reset básico */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* elimina scroll lateral */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação fixa */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Estilo base dos botões */
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Botão HOME */
+.btn-home {
+
+  /* mesmo estilo base, mas pode ter cor diferente se quiser */
+}
+
+/* Botão HOME fixo nas outras páginas */
+.btn-home-fixed {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 1500;
+}
+
+/* Botão azul */
+.btn-blue {
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+}
+
+/* Botão amarelo */
+.btn-yellow {
+  background-color: yellow;
+  border-color: yellow;
+  color: black;
+}
+
+.btn-red{
+  background-color: red;
+    border-color: red;
+    color: white;
+}
+.btn-red:hover {
+  background-color: rgb(255, 0, 0);
+  transform: scale(1.05);
+}
+
+.btn-yellow:hover {
+  background-color: gold;
+  transform: scale(1.05);
+}
+
+/* Fundo principal */
+.background {
+  background-image: url('../img/zeley.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  padding-top: 70px;
+  /* espaço para não ficar atrás da navbar */
+  box-sizing: border-box;
+}
+
+/* Footer transparente sobre o fundo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 0.9rem;
+  z-index: 1100;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
