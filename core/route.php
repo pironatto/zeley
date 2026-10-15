@@ -50,5 +50,8 @@ class route
         } else {
             include($pagina);
         }
+
     }
+
+ 
 }
