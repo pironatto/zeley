@@ -11,7 +11,6 @@ class route
 
     function Run()
     {
-
         //VERIFICAR SE A URL ESTÁ PREENCHIDA
         if (!empty($_GET['pag'])) {
             $url = $_GET['pag'];
@@ -40,18 +39,15 @@ class route
             $action = 'index';
         }
 
-        $pagina = "../core/pages/$controller/$action.php";
-
+        // Caminho absoluto baseado na raiz do projeto (/var/www/zeley)
+        $rootPath = dirname(__DIR__);
+        $pagina = "$rootPath/core/pages/$controller/$action.php";
 
         //INSTANCIA A PAGINA
-
-        if (!is_file("../core/pages/$controller/$action.php")) {
-            include("../core/pages/erro.php");
+        if (!is_file($pagina)) {
+            include("$rootPath/core/pages/erro.php");
         } else {
             include($pagina);
         }
-
     }
-
- 
 }

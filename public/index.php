@@ -1,17 +1,13 @@
 <?php
-error_log("Index.php executado com pag=" . ($_GET['pag'] ?? 'home'));
-
-use core\classes\Database;
-use core\classes\Functions;
-use core\route;
-
 session_start();
 
-require_once('../vendor/autoload.php');
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// Layout padrão
-require_once '../includes/header.php';
+// 1. Carrega o header (abre HTML, HEAD, BODY e NAVBAR)
+require_once __DIR__ . '/../includes/header.php';
 
-$r = new route(); // aqui o roteador carrega a página certa
+// 2. O roteador puxa o conteúdo da página solicitada (ex: home/index.php)
+$r = new \core\route(); 
 
-require_once '../includes/footer.php';
+// 3. Carrega o footer (fecha MAIN, FOOTER, BODY e HTML)
+require_once __DIR__ . '/../includes/footer.php';

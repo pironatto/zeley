@@ -1,11 +1,9 @@
 <?php
-// Aqui você pode colocar lógica PHP futuramente
+// Lógica PHP da home (se houver no futuro)
 ?>
 
-<body>
-    <!-- Fundo com imagem -->
+<!-- Conteúdo principal da página inicial -->
+<div>  
+    <!-- Fundo com imagem ou elementos visuais -->
     <div class="background"></div>
-
-</body>
-
-</html>
+</div>
